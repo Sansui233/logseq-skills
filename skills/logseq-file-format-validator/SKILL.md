@@ -1,6 +1,6 @@
 ---
 name: logseq-file-format-validator
-description: Validate Logseq outlined markdown format before writing to local files. Use to check outline structure, extended markdown syntax, link syntax, property format. Works with local file system, not through Plugin API.
+description: Logseq grammar guideline. Validate Logseq outlined markdown format before writing to local files. Use to check outline structure, extended markdown syntax, link syntax, property format. Works with local file system, not through Plugin API.
 license: MIT
 ---
 
@@ -159,14 +159,14 @@ author:: John Doe
 
 ### 5. Namespace Mapping
 
-**Rule**: File names use `.` (dot), links use `/` (slash)
+**Rule**: File names use `%2F` (dot), links use `/` (slash)
 
 ✅ Correct:
 ```markdown
-File: pages/PostgreSQL.role.md
+File: pages/PostgreSQL%2Frole.md
 Link in content: [[PostgreSQL/role]]
 
-File: pages/JavaScript.Array.md
+File: pages/JavaScript%2FArray.md
 Link in content: [[JavaScript/Array]]
 ```
 

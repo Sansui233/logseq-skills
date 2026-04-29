@@ -52,19 +52,6 @@ If page doesn't exist:
 - Create bidirectional links to related concepts
 - Use outline format with `-` and TAB indentation
 
-**For Namespace Pages:**
-
-Namespace mapping:
-- File: `pages/Parent.Child.md` → Link: `[[Parent/Child]]`
-- Use `.` (dot) in file names
-- Use `/` (slash) in Logseq links
-
-Example:
-```
-User wants: [[PostgreSQL/role]]
-Create file: pages/Postgresql.role.md
-```
-
 ### Step 3: Update Parent Page Index (for namespace children)
 
 When creating a namespace child page (e.g., `[[Parent/Child]]`):
@@ -105,7 +92,7 @@ Example:
 
 ### Links and Properties
 - Page links: `[[页面名称]]`
-- Namespace links: `[[父页面/子页面]]` (file: `父页面.子页面.md`)
+- Namespace links: `[[父页面/子页面]]` (file: `父页面%2F子页面.md`)
 - Block properties: `property:: value` (no `-` prefix)
 - Page properties at top of file (no `-` prefix)
 
@@ -133,15 +120,13 @@ tags:: 数据库, PostgreSQL
 ## File Naming Conventions
 
 ### Namespace Mapping
-- File: `pages/父页面.子页面.md` → Link: `[[父页面/子页面]]`
-- Use `.` (dot) in file names
+- File: `pages/父页面%2F子页面.md` → Link: `[[父页面/子页面]]`
+- Use `%2F` (dot) in file names
 - Use `/` (slash) in Logseq links
 
 ### Examples
-- File: `CommonJS.Module.md` → Link: `[[CommonJS/Module]]`
-- File: `JavaScript.Array.md` → Link: `[[JavaScript/Array]]`
-- File: `CSS.选择器.md` → Link: `[[CSS/选择器]]`
-- File: `Postgresql.role.md` → Link: `[[PostgreSQL/role]]`
+- File: `CommonJS%2FModule.md` → Link: `[[CommonJS/Module]]`
+- File: `CSS%2F选择器.md` → Link: `[[CSS/选择器]]`
 
 ### Special Characters
 - Use URL encoding for special characters if needed
@@ -185,8 +170,8 @@ Before finalizing:
 User: "给 PostgreSQL 词条增加 [[PostgreSQL/role]] 相关的概念"
 
 Actions:
-1. Check if pages/Postgresql.role.md exists → doesn't exist
-2. Create pages/Postgresql.role.md with role-related content
+1. Check if pages/Postgresql%2Frole.md exists → doesn't exist
+2. Create pages/Postgresql%2Frole.md with role-related content
 3. Update pages/Postgresql.md to reference [[PostgreSQL/role]]
 4. No journal entry needed
 ```

@@ -27,9 +27,10 @@ Use this skill when the user:
 **IMPORTANT**: Use semantic judgment to find pages, as file names may vary.
 
 1. List pages directory: `ls pages/ | grep -i keyword`
-2. Look for similar names, variations, or related concepts
-   - Example: `Postgresql.md` not `PostgreSQL.md`
+2. Look for similar names, variations, or related concepts. Consider for both Chinese and English keywords.
+   - Example: `Postgresql.md` or `PostgreSQL.md`
    - Example: `JavaScript.md` or `JS.md` for JavaScript
+   - Example: `Animation.md` or `动画.md`
 3. If a potentially matching file is found, read it to confirm
 4. If no matching file exists, proceed to create the page
 
@@ -46,7 +47,7 @@ If page exists:
 - Update bidirectional links
 
 If page doesn't exist:
-- Create new page with proper structure
+- Create new page with proper structure. The page name should follow wiki name atomic convention.
 - Add relevant tags: `tags:: tag1, tag2`
 - Create bidirectional links to related concepts
 - Use outline format with `-` and TAB indentation
